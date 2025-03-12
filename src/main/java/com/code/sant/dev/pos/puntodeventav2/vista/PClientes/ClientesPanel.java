@@ -80,6 +80,11 @@ public class ClientesPanel extends javax.swing.JPanel {
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setIcon(new FlatSVGIcon("inventarioP/export.svg"));
         jButton3.setText("Exportar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -311,6 +316,12 @@ public class ClientesPanel extends javax.swing.JPanel {
        ag.setVisible(true);
        ag.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+      verDetalles vd = new verDetalles();
+      vd.setVisible(true);
+      vd.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
    
 

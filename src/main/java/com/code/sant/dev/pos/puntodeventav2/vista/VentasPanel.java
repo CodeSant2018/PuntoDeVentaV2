@@ -170,8 +170,8 @@ public class VentasPanel extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(0, 0, 0));
         jButton8.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setIcon(new FlatSVGIcon("Dashboard/bill.svg"));
-        jButton8.setText("Facturas");
+        jButton8.setIcon(new FlatSVGIcon("ventasP/van.svg"));
+        jButton8.setText("Proveedores");
         jButton8.setBorderPainted(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

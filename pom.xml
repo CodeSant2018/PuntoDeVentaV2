@@ -50,4 +50,5 @@
             <version>RELEASE230</version>
         </dependency>
     </dependencies>
+    <name>PuntoDeVentaV2</name>
 </project>

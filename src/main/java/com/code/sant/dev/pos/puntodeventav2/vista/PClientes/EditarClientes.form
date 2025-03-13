@@ -154,7 +154,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Agregar Nuevo Cliente "/>
+        <Property name="text" type="java.lang.String" value="Editar Cliente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -165,7 +165,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="66" red="66" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Ingresa los detalles del nuevo cliente para agregarlo al sistema  "/>
+        <Property name="text" type="java.lang.String" value="Actualiza la informaci&#xf3;n del cliente  "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
@@ -179,7 +179,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Agregar Cliente"/>
+        <Property name="text" type="java.lang.String" value="Actualizar Cliente"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>

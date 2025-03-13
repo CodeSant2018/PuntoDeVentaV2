@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author codesant
  */
-public class agregarClientes extends javax.swing.JFrame {
+public class EditarClientes extends javax.swing.JFrame {
 
     /**
      * Creates new form agregarClientes
      */
-    public agregarClientes() {
+    public EditarClientes() {
         initComponents();
     }
 
@@ -57,16 +57,16 @@ public class agregarClientes extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Agregar Nuevo Cliente ");
+        jLabel1.setText("Editar Cliente");
 
         jLabel2.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("Ingresa los detalles del nuevo cliente para agregarlo al sistema  ");
+        jLabel2.setText("Actualiza la información del cliente  ");
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Agregar Cliente");
+        jButton2.setText("Actualizar Cliente");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -223,8 +223,7 @@ public class agregarClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        dispose();
-       
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

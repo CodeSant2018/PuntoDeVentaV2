@@ -114,7 +114,7 @@ public class verDetalles extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Total Gastado");
+        jLabel7.setText("Total Vendido");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

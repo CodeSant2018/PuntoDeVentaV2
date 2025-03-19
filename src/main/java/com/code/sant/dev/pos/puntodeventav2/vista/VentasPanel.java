@@ -7,6 +7,7 @@ package com.code.sant.dev.pos.puntodeventav2.vista;
 import com.code.sant.dev.pos.puntodeventav2.vista.PClientes.ClientesPanel;
 import com.code.sant.dev.pos.puntodeventav2.vista.empleados.EmpleadosPanel;
 import com.code.sant.dev.pos.puntodeventav2.vista.inventario.Pinventario;
+import com.code.sant.dev.pos.puntodeventav2.vista.proveedores.ProveedoresPanel;
 import com.code.sant.dev.pos.puntodeventav2.vista.ventasPanel.PVentas;
 import com.code.sant.dev.pos.puntodeventav2.vista.vistasPaneles.Dashboard;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
@@ -231,21 +232,21 @@ public class VentasPanel extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(40, 40, 40)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(40, 40, 40)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(40, 40, 40)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(40, 40, 40)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(40, 40, 40)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(40, 40, 40)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(40, 40, 40)
                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -303,7 +304,7 @@ public class VentasPanel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        buttonProveedores();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -399,6 +400,18 @@ public class VentasPanel extends javax.swing.JFrame {
         
     }
 
+    
+    private void buttonProveedores() {
+
+        ProveedoresPanel db = new ProveedoresPanel();
+        db.setSize(conteiner.getWidth(), conteiner.getHeight());
+        db.setLocation(0, 0);
+
+        conteiner.removeAll();
+        conteiner.add(db, BorderLayout.CENTER);
+        conteiner.revalidate();
+        conteiner.repaint();
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel conteiner;
     private javax.swing.JButton jButton1;

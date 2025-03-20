@@ -62,12 +62,10 @@ public class EmpleadosPanel extends javax.swing.JPanel {
         jTextField1.setFont(new java.awt.Font("Inter", 0, 14)); // NOI18N
 
         jButton2.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setIcon(new FlatSVGIcon("inventarioP/import.svg"));
         jButton2.setText("Importar");
 
         jButton3.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setIcon(new FlatSVGIcon("inventarioP/export.svg"));
         jButton3.setText("Exportar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -77,11 +75,8 @@ public class EmpleadosPanel extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setIcon(new FlatSVGIcon("clientesP/directory.svg"));
         jLabel2.setText("Directorio de Empleados");
-
-        jTabbedPane1.setForeground(new java.awt.Color(0, 0, 0));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -131,7 +126,6 @@ public class EmpleadosPanel extends javax.swing.JPanel {
         );
 
         jButton4.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setIcon(new FlatSVGIcon("inventarioP/details.svg"));
         jButton4.setText("Detalles");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +135,6 @@ public class EmpleadosPanel extends javax.swing.JPanel {
         });
 
         jButton5.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setIcon(new FlatSVGIcon("empleados/edit.svg"));
         jButton5.setText("Editar");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -167,7 +160,7 @@ public class EmpleadosPanel extends javax.swing.JPanel {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

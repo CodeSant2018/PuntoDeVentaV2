@@ -56,7 +56,6 @@ public class PVentas extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
 
         jButton1.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setIcon(new FlatSVGIcon("ventasP/user.svg"));
         jButton1.setText("Asignar Cliente");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +65,6 @@ public class PVentas extends javax.swing.JPanel {
         });
 
         jLabel1.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Generar Venta");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -83,7 +81,6 @@ public class PVentas extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTable1);
 
         jLabel2.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("jLabel2");
 
         jLabel3.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
@@ -95,7 +92,6 @@ public class PVentas extends javax.swing.JPanel {
         jLabel4.setText("Impuestos:");
 
         jLabel5.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Total:");
 
         jButton4.setBackground(new java.awt.Color(0, 0, 0));
@@ -109,13 +105,11 @@ public class PVentas extends javax.swing.JPanel {
         });
 
         jLabel6.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Nueva Venta");
 
         jTextField1.setText("jTextField1");
 
         jButton5.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setIcon(new FlatSVGIcon("ventasP/money_1.svg"));
         jButton5.setText("Caja");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +119,6 @@ public class PVentas extends javax.swing.JPanel {
         });
 
         jButton6.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setIcon(new FlatSVGIcon("ventasP/memoryplus.svg"));
         jButton6.setText("Entrada/Salidas");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -135,7 +128,6 @@ public class PVentas extends javax.swing.JPanel {
         });
 
         jButton8.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(0, 0, 0));
         jButton8.setIcon(new FlatSVGIcon("ventasP/out.svg"));
         jButton8.setText("Cerrar Caja");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -166,25 +158,20 @@ public class PVentas extends javax.swing.JPanel {
         jLabel7.setText("jLabel7");
 
         jButton10.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(0, 0, 0));
         jButton10.setIcon(new FlatSVGIcon("ventasP/sale.svg"));
         jButton10.setText("Mayoreo");
 
         jButton3.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setIcon(new FlatSVGIcon("ventasP/delete.svg"));
         jButton3.setText("Eliminar Producto");
 
         jTextField2.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
         jTextField2.setText("0.00");
 
         jTextField3.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
         jTextField3.setText("0.00");
 
         jTextField4.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setText("0.00");
 
         jLabel8.setIcon(new FlatSVGIcon("ventasP/money1.svg"));
@@ -220,14 +207,14 @@ public class PVentas extends javax.swing.JPanel {
                             .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(51, 51, 51)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(6, 6, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(24, 24, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))

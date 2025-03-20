@@ -112,7 +112,6 @@ public  class verDetalles extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Cerrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,27 +132,21 @@ public  class verDetalles extends javax.swing.JFrame {
         jSeparator3.setForeground(new java.awt.Color(204, 204, 204));
 
         jLabel3.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Información Personal");
 
         jLabel4.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setIcon(new FlatSVGIcon("clientesP/name.svg"));
 
         jLabel5.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setIcon(new FlatSVGIcon("clientesP/phone.svg"));
 
         jLabel6.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setIcon(new FlatSVGIcon("clientesP/gmail.svg"));
 
         jLabel7.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setIcon(new FlatSVGIcon("clientesP/location.svg"));
 
         jLabel8.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Estadística de Compra");
 
         jLabel2.setText("Total de Compras:");
@@ -165,7 +158,6 @@ public  class verDetalles extends javax.swing.JFrame {
         jLabel12.setText("Tipo de Cliente:");
 
         jLabel13.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Historia de Compras");
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -318,13 +310,13 @@ public  class verDetalles extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addGap(25, 25, 25))
+                .addGap(20, 20, 20))
         );
 
         pack();

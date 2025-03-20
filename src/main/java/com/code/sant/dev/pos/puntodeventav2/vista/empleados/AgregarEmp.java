@@ -67,7 +67,6 @@ public class AgregarEmp extends javax.swing.JFrame {
         setUndecorated(true);
 
         jLabel1.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new FlatSVGIcon("empleados/addUser.svg"));
         jLabel1.setText("Agregar Empleado ");
 
@@ -76,42 +75,34 @@ public class AgregarEmp extends javax.swing.JFrame {
         jLabel2.setText("Ingrese la información del empleado y guarde los cambios.");
 
         jLabel3.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setIcon(new FlatSVGIcon("empleados/user.svg"));
         jLabel3.setText("Nombre Completo:");
 
         jLabel4.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setIcon(new FlatSVGIcon("empleados/id.svg"));
         jLabel4.setText("ID Empleado:");
 
         jLabel5.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setIcon(new FlatSVGIcon("empleados/email.svg"));
         jLabel5.setText("Correo:");
 
         jLabel6.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setIcon(new FlatSVGIcon("empleados/phone.svg"));
         jLabel6.setText("Telefono:");
 
         jLabel7.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setIcon(new FlatSVGIcon("empleados/job.svg"));
         jLabel7.setText("Puesto:");
 
         jLabel8.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setIcon(new FlatSVGIcon("empleados/date.svg"));
         jLabel8.setText("Fecha Nacimiento:");
 
         jLabel9.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setIcon(new FlatSVGIcon("empleados/password.svg"));
         jLabel9.setText("Confirma Contraseña");
 
         jLabel10.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setIcon(new FlatSVGIcon("empleados/password.svg"));
         jLabel10.setText("Contraseña");
 
@@ -124,12 +115,10 @@ public class AgregarEmp extends javax.swing.JFrame {
         jButton1.setText("Agregar ");
 
         jButton2.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setIcon(new FlatSVGIcon("empleados/close.svg"));
         jButton2.setText("Cancelar");
 
         jLabel11.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setIcon(new FlatSVGIcon("empleados/date.svg"));
         jLabel11.setText("Fecha Inicio:");
 
@@ -145,32 +134,26 @@ public class AgregarEmp extends javax.swing.JFrame {
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel12.setFont(new java.awt.Font("Inter", 1, 15)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setIcon(new FlatSVGIcon("empleados/state.svg"));
         jLabel12.setText("Estado:");
 
         jLabel13.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setIcon(new FlatSVGIcon("empleados/work.svg"));
         jLabel13.setText("Información Personal ");
 
         jLabel14.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setIcon(new FlatSVGIcon("empleados/contact.svg"));
         jLabel14.setText("Información de Contacto");
 
         jLabel15.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setIcon(new FlatSVGIcon("empleados/dateE.svg"));
         jLabel15.setText("Fechas");
 
         jLabel16.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setIcon(new FlatSVGIcon("empleados/maletin.svg"));
         jLabel16.setText("Información Laboral");
 
         jLabel17.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setIcon(new FlatSVGIcon("empleados/seguridad.svg"));
         jLabel17.setText("Seguridad ");
 
@@ -258,7 +241,7 @@ public class AgregarEmp extends javax.swing.JFrame {
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(34, 34, 34)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel13)
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -270,7 +253,7 @@ public class AgregarEmp extends javax.swing.JFrame {
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(15, 15, 15)
                 .addComponent(jLabel14)
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -280,9 +263,9 @@ public class AgregarEmp extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                .addGap(15, 15, 15)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(15, 15, 15)
                 .addComponent(jLabel15)
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -292,9 +275,9 @@ public class AgregarEmp extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                .addGap(15, 15, 15)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(15, 15, 15)
                 .addComponent(jLabel16)
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,9 +290,9 @@ public class AgregarEmp extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel12)))
-                .addGap(25, 25, 25)
+                .addGap(15, 15, 15)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(15, 15, 15)
                 .addComponent(jLabel17)
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -317,7 +300,7 @@ public class AgregarEmp extends javax.swing.JFrame {
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
+                        .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1)
                             .addComponent(jButton2)))

@@ -8,6 +8,7 @@ import com.code.sant.dev.pos.puntodeventav2.vista.PClientes.ClientesPanel;
 import com.code.sant.dev.pos.puntodeventav2.vista.empleados.EmpleadosPanel;
 import com.code.sant.dev.pos.puntodeventav2.vista.inventario.Pinventario;
 import com.code.sant.dev.pos.puntodeventav2.vista.proveedores.ProveedoresPanel;
+import com.code.sant.dev.pos.puntodeventav2.vista.reportes.ReportesPanel;
 import com.code.sant.dev.pos.puntodeventav2.vista.ventasPanel.PVentas;
 import com.code.sant.dev.pos.puntodeventav2.vista.vistasPaneles.Dashboard;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
@@ -165,6 +166,11 @@ public class VentasPanel extends javax.swing.JFrame {
         jButton6.setIcon(new FlatSVGIcon("Dashboard/report.svg"));
         jButton6.setText("Reportes");
         jButton6.setBorderPainted(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton8.setBackground(new java.awt.Color(0, 0, 0));
         jButton8.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
@@ -330,6 +336,10 @@ public class VentasPanel extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         buttonEmpleado();
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        buttonReporte();
+    }//GEN-LAST:event_jButton6ActionPerformed
     private void mainDashboart() {
         Dashboard db = new Dashboard();
         db.setSize(conteiner.getWidth(), conteiner.getHeight());
@@ -399,11 +409,22 @@ public class VentasPanel extends javax.swing.JFrame {
         conteiner.repaint();
         
     }
-
     
-    private void buttonProveedores() {
+    private void buttonProveedores(){
+        EmpleadosPanel db = new EmpleadosPanel();
+        db.setSize(conteiner.getWidth(), conteiner.getHeight());
+        db.setLocation(0, 0);
 
-        ProveedoresPanel db = new ProveedoresPanel();
+        conteiner.removeAll();
+        conteiner.add(db, BorderLayout.CENTER);
+        conteiner.revalidate();
+        conteiner.repaint();
+        
+    }
+
+    private void buttonReporte() {
+
+        ReportesPanel db = new ReportesPanel();
         db.setSize(conteiner.getWidth(), conteiner.getHeight());
         db.setLocation(0, 0);
 

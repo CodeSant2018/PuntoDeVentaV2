@@ -89,11 +89,13 @@ public class ReportesPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setText("jButton1");
+        jButton2.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setText("Exportar");
 
         jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel5.setIcon(new FlatSVGIcon("reportes/date.svg"));
-        jLabel5.setText("Rango de Fechas");
+        jLabel5.setText("Fechas");
 
         jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
         jLabel6.setIcon(new FlatSVGIcon("reportes/type.svg"));

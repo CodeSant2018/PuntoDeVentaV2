@@ -119,7 +119,7 @@ public class PVentas extends javax.swing.JPanel {
         });
 
         jButton6.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jButton6.setIcon(new FlatSVGIcon("ventasP/memoryplus.svg"));
+        jButton6.setIcon(new FlatSVGIcon("ventasP/out.svg"));
         jButton6.setText("Entrada/Salidas");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +128,7 @@ public class PVentas extends javax.swing.JPanel {
         });
 
         jButton8.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jButton8.setIcon(new FlatSVGIcon("ventasP/out.svg"));
+        jButton8.setIcon(new FlatSVGIcon("ventasP/closeV.svg"));
         jButton8.setText("Cerrar Caja");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +158,7 @@ public class PVentas extends javax.swing.JPanel {
         jLabel7.setText("jLabel7");
 
         jButton10.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
-        jButton10.setIcon(new FlatSVGIcon("ventasP/sale.svg"));
+        jButton10.setIcon(new FlatSVGIcon("ventasP/porcentaje.svg"));
         jButton10.setText("Mayoreo");
 
         jButton3.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N

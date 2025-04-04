@@ -20,11 +20,11 @@ public class PuntoDeVentaV2 {
         UIManager.put("Component.arc", 10);
         UIManager.put("ProgressBar.arc", 20);
         UIManager.put("TextComponent.arc", 10);
-        /*Usuarios u = new Usuarios();
+        Loging u = new Loging();
         u.setVisible(true);
-        u.setLocationRelativeTo(null);*/
+        u.setLocationRelativeTo(null);
       
-         VentasPanel p = new VentasPanel();
+         /*VentasPanel p = new VentasPanel();
         p.setVisible(true);
         p.setLocationRelativeTo(null);
          /*Usuarios p = new Usuarios();

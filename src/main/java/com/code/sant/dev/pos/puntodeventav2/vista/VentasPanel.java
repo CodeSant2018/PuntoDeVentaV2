@@ -175,7 +175,7 @@ public class VentasPanel extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(0, 0, 0));
         jButton8.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setIcon(new FlatSVGIcon("ventasP/van.svg"));
+        jButton8.setIcon(new FlatSVGIcon("Dashboard/van.svg"));
         jButton8.setText("Proveedores");
         jButton8.setBorderPainted(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -411,7 +411,7 @@ public class VentasPanel extends javax.swing.JFrame {
     }
     
     private void buttonProveedores(){
-        EmpleadosPanel db = new EmpleadosPanel();
+        ProveedoresPanel db = new ProveedoresPanel();
         db.setSize(conteiner.getWidth(), conteiner.getHeight());
         db.setLocation(0, 0);
 

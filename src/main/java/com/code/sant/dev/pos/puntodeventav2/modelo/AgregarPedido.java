@@ -11,7 +11,7 @@ import org.bson.Document;
 
 @Getter
 @Setter
-@AllArgsConstructor
+
 
 public class AgregarPedido {
     private String nombre;
@@ -20,17 +20,27 @@ public class AgregarPedido {
     private String productosSuministros;
     private String terminoPago;
     private String notas;
+
+    public AgregarPedido(String nombre, String categoria, String contacto, String productosSuministros, String terminoPago, String notas) {
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.contacto = contacto;
+        this.productosSuministros = productosSuministros;
+        this.terminoPago = terminoPago;
+        this.notas = notas;
+    }
+    
     
     
 
 public Document toDocumentAgregarPedido() {
     return new Document()
-        .append("nombre", getNombre())
-        .append("categoria", getCategoria())
-        .append("contacto", getContacto())
-        .append("productosSuministros", getProductosSuministros())
-        .append("terminoPago", getTerminoPago())
-        .append("notas", getNotas());
+        .append("nombre", nombre)
+        .append("categoria",categoria)
+        .append("contacto", contacto)
+        .append("productosSuministros", productosSuministros)
+        .append("terminoPago", terminoPago)
+        .append("notas", notas);
 }
 
     

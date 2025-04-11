@@ -18,10 +18,10 @@ public class Cliente extends Persona {
     private String direccion;
     private String nota;
 
-    public Cliente(String nombre, String telefono, String correo, Date fecha, String tipoCliente, String direccion,String nota) {
+    public Cliente(String nombre, String telefono, String correo, Date fecha, String tipoCliente, String direccion, String nota) {
         super(nombre, telefono, correo, fecha);
         this.tipoCliente = tipoCliente;
-        this.direccion=direccion;
+        this.direccion = direccion;
         this.nota = nota;
     }
 
@@ -29,10 +29,9 @@ public class Cliente extends Persona {
         return new Document("Nombre", getNombre())
                 .append("Telefono", getTelefono())
                 .append("Correo", getCorreo())
-                .append("Fecha Nacimiento", getFecha())
-                .append("Tipo Cliente", tipoCliente)
-                .append("Dirección", direccion)
+                .append("FechaNacimiento", getFecha())
+                .append("TipoCliente", tipoCliente)
+                .append("Direccion", direccion)
                 .append("Nota", nota);
     }
-
 }

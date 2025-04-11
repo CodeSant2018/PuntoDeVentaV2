@@ -31,11 +31,11 @@ public class Empleado extends Persona {
     }
 
     public Document toDocumentEmpleado() {
-        return new Document("Nombre",getNombre())
-                .append("Telefono",getTelefono())
+        return new Document("Nombre", getNombre())
+                .append("Id_Empleado", idEmpleado)
+                .append("Telefono", getTelefono())
                 .append("Correo", getCorreo())
                 .append("Fecha Nacimiento", getFecha())
-                .append("Id_Empleado", idEmpleado)
                 .append("Fecha Inicio", fechaInicio)
                 .append("Puesto", puesto)
                 .append("Estado", estado)

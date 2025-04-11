@@ -7,39 +7,56 @@ package com.code.sant.dev.pos.puntodeventav2.services;
 import com.code.sant.dev.pos.puntodeventav2.entity.GestionData;
 import com.code.sant.dev.pos.puntodeventav2.modelo.Cliente;
 import com.code.sant.dev.pos.puntodeventav2.repository.RepositoryClientes;
+import com.mongodb.MongoException;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.model.Filters;
+import javax.swing.JOptionPane;
 import org.bson.Document;
 
 /**
  *
  * @author codesant
  */
-public class ServicesCliente implements RepositoryClientes<Cliente>{
-    
-    private GestionData clientes =  new GestionData("Clientes");
+public class ServicesCliente implements RepositoryClientes<Cliente> {
+
+    private GestionData clientes = new GestionData("Clientes");
 
     @Override
     public void crear(Cliente t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        try {
+            clientes.getCollectionData().insertOne(t.toDocumentCliente());
+            JOptionPane.showMessageDialog(null, "Cliente Ingresado de Manera Correta!", "Correcto", JOptionPane.INFORMATION_MESSAGE);
+        } catch (MongoException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public MongoCollection<Document> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return clientes.getCollectionData();
     }
 
     @Override
     public void delete(String t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        try {
+            clientes.getCollectionData().deleteOne(Filters.eq("Nombre", t));
+            JOptionPane.showMessageDialog(null, "Cliente Eliminado de Manera Correta!", "Correcto", JOptionPane.INFORMATION_MESSAGE);
+        } catch (MongoException e) {
+        }
     }
 
     @Override
     public void update(String t, Cliente a) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        try {
+            clientes.getCollectionData().updateOne(Filters.eq("Nombre", t), new Document("$set", a.toDocumentCliente()));
+            JOptionPane.showMessageDialog(null, "Cliente Actualizado de Manera Correta!", "Correcto", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (MongoException e) {
+        }
     }
 
     @Override
     public Document findByName(String t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return clientes.getCollectionData().find(Filters.eq("Nombre",t)).first();
     }
 }

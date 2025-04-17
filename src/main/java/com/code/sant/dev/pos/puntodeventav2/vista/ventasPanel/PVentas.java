@@ -5,6 +5,8 @@
 package com.code.sant.dev.pos.puntodeventav2.vista.ventasPanel;
 
 import com.formdev.flatlaf.extras.FlatSVGIcon;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,6 +19,7 @@ public class PVentas extends javax.swing.JPanel {
      */
     public PVentas() {
         initComponents();
+        CrearModelo2();
     }
 
     /**
@@ -292,7 +295,7 @@ public class PVentas extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         AsignarCl cl = new AsignarCl();
         cl.setVisible(true);
-        
+
         cl.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -304,8 +307,8 @@ public class PVentas extends javax.swing.JPanel {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         Caja cj = new Caja();
-       cj.setVisible(true);
-       cj.setLocationRelativeTo(null);
+        cj.setVisible(true);
+        cj.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -315,11 +318,44 @@ public class PVentas extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       ProcesarPago pp = new ProcesarPago();
-       pp.setVisible(true);
-       pp.setLocationRelativeTo(null);
+        ProcesarPago pp = new ProcesarPago();
+        pp.setVisible(true);
+        pp.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    DefaultTableModel modelo2;
+
+    private void CrearModelo2() {
+        try {
+            modelo2 = (new DefaultTableModel(
+                    null, new String[]{
+                        "id", "Nombres",
+                        "apellidos", "direccion"}) {
+                Class[] types = new Class[]{
+                    java.lang.String.class,
+                    java.lang.String.class,
+                    java.lang.String.class,
+                    java.lang.String.class
+                };
+                boolean[] canEdit = new boolean[]{
+                    false, false, false, false
+                };
+
+                @Override
+                public Class getColumnClass(int columnIndex) {
+                    return types[columnIndex];
+                }
+
+                @Override
+                public boolean isCellEditable(int rowIndex, int colIndex) {
+                    return canEdit[colIndex];
+                }
+            });
+            jTable1.setModel(modelo2);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.toString() + "error2");
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

@@ -10,30 +10,29 @@ import lombok.Getter;
 import lombok.Setter;
 import org.bson.Document;
 
-
 @Setter
 @Getter
 
 public class VentasProductos {
+
     private Date fecha;
+    private String cliente;
     private int cantProductos;
     private double totalVenta;
     private double ganancias;
     private List<Document> productos;
     private String tipoPago;
-    
+
     public Document toDocumentVentasProductos() {
-    Document doc = new Document();
-    
-    doc.append("fecha", this.fecha)
-       .append("cantProductos", this.cantProductos)
-       .append("totalVenta", this.totalVenta)
-       .append("ganancias", this.ganancias)
-       .append("productos", this.productos)  // List<Document> se puede guardar directamente
-       .append("tipoPago", this.tipoPago);
-    
-    return doc;
-}
-    
-    
+        Document doc = new Document("fecha", this.fecha);
+        doc.append("cliente", cliente)
+                .append("cantProductos", this.cantProductos)
+                .append("totalVenta", this.totalVenta)
+                .append("ganancias", this.ganancias)
+                .append("productos", this.productos) // List<Document> se puede guardar directamente
+                .append("tipoPago", this.tipoPago);
+
+        return doc;
+    }
+
 }

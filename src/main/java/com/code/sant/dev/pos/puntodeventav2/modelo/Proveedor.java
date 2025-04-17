@@ -32,7 +32,7 @@ public class Proveedor {
     }
     
     public Document toDocumentProveedor(){
-        return new Document("Nombre Proveedor",nombre)
+        return new Document("Nombre_Proveedor",nombre)
                 .append("Id_Proveedor", id)
                 .append("Contacto", contanto)
                 .append("Dirección", dirreccion)

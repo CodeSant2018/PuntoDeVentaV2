@@ -4,9 +4,13 @@
  */
 package com.code.sant.dev.pos.puntodeventav2.vista.ventasPanel;
 
+import com.code.sant.dev.pos.puntodeventav2.services.ServicesInventario;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
-import javax.swing.JOptionPane;
+import com.mongodb.client.FindIterable;
+import java.awt.Color;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import org.bson.Document;
 
 /**
  *
@@ -14,12 +18,15 @@ import javax.swing.table.DefaultTableModel;
  */
 public class PVentas extends javax.swing.JPanel {
 
-    /**
-     * Creates new form PVentas
-     */
+    private DefaultTableModel modelo2;
+    private DefaultTableModel modelo;
+    private ServicesInventario inventario = new ServicesInventario();
+
     public PVentas() {
         initComponents();
-        CrearModelo2();
+        CrearModeloVenta();
+        CrearModeloInventario();
+        tablasClores();
     }
 
     /**
@@ -34,7 +41,7 @@ public class PVentas extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTable3 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -47,7 +54,7 @@ public class PVentas extends javax.swing.JPanel {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -70,7 +77,7 @@ public class PVentas extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
         jLabel1.setText("Generar Venta");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -81,7 +88,7 @@ public class PVentas extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTable3);
 
         jLabel2.setFont(new java.awt.Font("Inter", 1, 16)); // NOI18N
         jLabel2.setText("jLabel2");
@@ -144,7 +151,8 @@ public class PVentas extends javax.swing.JPanel {
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("Buscar - ENTER");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -155,7 +163,7 @@ public class PVentas extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(jTable1);
 
         jLabel7.setIcon(new FlatSVGIcon("ventasP/search.svg"));
         jLabel7.setText("jLabel7");
@@ -323,39 +331,98 @@ public class PVentas extends javax.swing.JPanel {
         pp.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    DefaultTableModel modelo2;
+    //Diseño del header de la tablas
+    private void colorsTable(JTable tabla) {
+        tabla.getTableHeader().setOpaque(false);
+        tabla.getTableHeader().setBackground(Color.BLACK);
+        tabla.getTableHeader().setForeground(Color.WHITE);
+    }
 
-    private void CrearModelo2() {
+    private void tablasClores() {
+        colorsTable(jTable3);
+        colorsTable(jTable1);
+    }
+    //------------------------------------------------------
+
+    //Creacion del metodo modelo de las tablas
+    private void creationTable(DefaultTableModel modelo, JTable tabla, String[] culum, Class[] tipos, boolean[] columnasEditables) {
         try {
-            modelo2 = (new DefaultTableModel(
-                    null, new String[]{
-                        "id", "Nombres",
-                        "apellidos", "direccion"}) {
-                Class[] types = new Class[]{
-                    java.lang.String.class,
-                    java.lang.String.class,
-                    java.lang.String.class,
-                    java.lang.String.class
-                };
-                boolean[] canEdit = new boolean[]{
-                    false, false, false, false
-                };
+            modelo = (new DefaultTableModel(null, culum) {
 
                 @Override
-                public Class getColumnClass(int columnIndex) {
-                    return types[columnIndex];
+                public Class<?> getColumnClass(int columnIndex) {
+                    return tipos[columnIndex];
+
                 }
 
                 @Override
-                public boolean isCellEditable(int rowIndex, int colIndex) {
-                    return canEdit[colIndex];
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return columnasEditables[columnIndex];
                 }
+
             });
-            jTable1.setModel(modelo2);
+            tabla.setModel(modelo);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.toString() + "error2");
         }
     }
+
+    //---------------------------------------------------------------------------
+    //Implementacion del metodo del modelo de tablas
+    private void CrearModeloVenta() {
+
+        String columnas[] = {"ID", "Producto",
+            "Categoría", "Precio", "Cantidad", "Total"};
+
+        Class[] tiposDatos = {java.lang.String.class,
+            java.lang.String.class,
+            java.lang.String.class,
+            java.lang.Double.class,
+            java.lang.Integer.class,
+            java.lang.Double.class};
+        boolean[] editables = {false, false, false, false, false, false};
+
+        creationTable(modelo2, jTable3, columnas, tiposDatos, editables);
+    }
+
+    private void CrearModeloInventario() {
+
+        String[] columnas = {"ID", "Producto",
+            "Categoría", "Stock Minimo", "Stock", "Precio Venta"};
+        Class[] tipos = {java.lang.String.class,
+            java.lang.String.class,
+            java.lang.String.class,
+            java.lang.Integer.class,
+            java.lang.Integer.class,
+            java.lang.Double.class};
+        boolean[] editables = {false, false, false, false, false, false};
+
+        creationTable(modelo2, jTable1, columnas, tipos, editables);
+        getDataInventario();
+    }
+    //------------------------------------------------------------------------
+
+    //Logica de los botones 
+    //Metodo para mostrar el inventario de la base de datos en la tablas 
+    private void getDataInventario() {
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+
+        for (Document datos : inventario.findAll().find()) {
+            modelo.addRow(new Object[]{
+                datos.getString("id_Producto"),
+                datos.getString("nombre"),
+                datos.getString("categoria"),
+                datos.getInteger("stockMin"),
+                datos.getInteger("stockInicial"),
+                datos.getDouble("precioVenta")
+            });
+        }
+        
+    }
+    //-----------------------------------------------------------------
+        
+    
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -379,7 +446,7 @@ public class PVentas extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

@@ -23,8 +23,9 @@ public class Inventario {
     private int porcentajeGanancia;
     private int margen;
     private double ganancia;
+    private String descripcion;
 
-    public Inventario(String idProduct, String nombre, String categoria, int stockMin, int stockInicial, double precioCompra, double precioVenta, int porcentajeGanancia, int margen, double ganancia) {
+    public Inventario(String idProduct, String nombre, String categoria, int stockMin, int stockInicial, double precioCompra, double precioVenta, int porcentajeGanancia, int margen, double ganancia,String descripcion) {
         this.idProduct = idProduct;
         this.nombre = nombre;
         this.categoria = categoria;
@@ -35,6 +36,7 @@ public class Inventario {
         this.porcentajeGanancia = porcentajeGanancia;
         this.margen = margen;
         this.ganancia = ganancia;
+        this.descripcion = descripcion;
     }
 
     public Document toDocumentInventario() {
@@ -47,7 +49,8 @@ public class Inventario {
                 .append("precioVenta", this.precioVenta)
                 .append("porcentajeGanancia", this.porcentajeGanancia)
                 .append("margen", this.margen)
-                .append("ganancia", this.ganancia);
+                .append("ganancia", this.ganancia)
+                .append("descripcion", this.descripcion);    ;
 
         return doc;
     }

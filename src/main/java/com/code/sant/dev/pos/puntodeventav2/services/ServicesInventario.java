@@ -25,7 +25,7 @@ public class ServicesInventario implements Repositorytransactions<Inventario> {
     public void crear(Inventario t) {
         try {
             inventario.getCollectionData().insertOne(t.toDocumentInventario());
-            JOptionPane.showMessageDialog(null, "Producto Ingresado de Manera Correta!", "Correcto", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "¡Producto agregado exitosamente!", "Correcto", JOptionPane.INFORMATION_MESSAGE);
 
         } catch (MongoException e) {
         }
